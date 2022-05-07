@@ -6,10 +6,41 @@
   --primary-color: #081A2A;
   --primary-2-color: #092034;
   --secondary-color: #E63946;
+  --secondary-2-color: #DA1B2B;
 }
 
 .hidden {
   display: none;
+  z-index: -2;
+}
+
+#download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  left: 25px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border-radius: 100px;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+#download:hover {
+  background-color: var(--secondary-2-color);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .loader {
@@ -19,7 +50,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 3;
   background-color: var(--primary-color);
 }
 

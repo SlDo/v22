@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="axios" level="application" />
     <orderEntry type="library" name="websheet" level="application" />
+    <orderEntry type="library" name="qr-code-styling" level="application" />
   </component>
 </module>
