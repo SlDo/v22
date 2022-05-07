@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "rollup:help": "rollup --help",
+    "build": "rollup -c rollup.config.js",
+    "rollup:es": "rollup ./src/main.js --file ./build/bundle.js --format es"
+  },
+  "dependencies": {
+    "google-spreadsheet": "^3.2.0",
+    "rollup-plugin-hot": "^0.1.1",
+    "rollup-plugin-serve": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.17.10",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "babel-plugin-transform-html-import-to-string": "^2.0.0",
+    "rollup": "^2.72.0",
+    "rollup-plugin-browserslist": "github:jonathantneal/rollup-plugin-browser-resolve",
+    "rollup-plugin-livereload": "^2.0.5"
+  }
+}
