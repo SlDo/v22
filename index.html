@@ -49,7 +49,8 @@
   </script>
   <script src="https://cdn.jsdelivr.net/gh/pierreavn/websheetjs/dist/websheet.min.js"></script>
   <script>
-    const paramsString = document.location.pathname;
+    const paramsString = document.location.search;
+    const searchParams = new URLSearchParams(paramsString);
     
     websheet('members', {
       url: 'https://docs.google.com/spreadsheets/d/1e6717vxrxf4n3vJfbhFsuauwBylRdFW4bc07sPk9jXU/edit#gid=0',
@@ -58,7 +59,7 @@
       aliases: {
         'full_name': row => row['first_name'].value + " " + row['last_name'].value,
       },
-      query: `select * where A contains '${paramsString.slice(1)}'`,
+      query: `select * where A contains '${searchParams.get('id')}'`,
     })
   </script>
 </body>
