@@ -5,6 +5,7 @@
 :root {
   --primary-color: #081A2A;
   --primary-2-color: #092034;
+  --secondary-3-color: #185286;
   --secondary-color: #E63946;
   --secondary-2-color: #DA1B2B;
 }
@@ -59,6 +60,88 @@
   line-height: 1.25;
   color: var(--primary-color);
   box-sizing: border-box;
+}
+
+.alco {
+  position: absolute;
+  bottom: -65%;
+  left: calc(50% + 50px);
+  transform: translate(-50%, 0);
+}
+
+.hidden-op {
+  opacity: 0;
+  width: 0;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.hint {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--primary-2-color);
+  border-radius: 50px;
+  transition: opacity 1s;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.hint:hover > .hint-text {
+  opacity: 1;
+  height: auto;
+  width: auto;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.hint:not(:hover) > .hint-text {
+  transition: all 0s linear;
+}
+
+.hint:hover {
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.hint:hover > .icon {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  transform: scale(0);
+}
+
+.hint-text {
+  transition: all 0.5s linear;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.hint > .icon {
+  transition: all .25s linear;
+  transform: scale(1);
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-2-color);
+}
+
+.icon {
+  fill: white;
 }
 
 .modal__close {

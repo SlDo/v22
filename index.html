@@ -43,6 +43,14 @@
     <article class='person'>
       <div class='person__image-card'>
         <img data-websheet-bind:src="ava" class='person__image'>
+        <div class='icon-wrapper hint alco' data-websheet-if="alcohol">
+          <svg class='icon' viewBox="0 0 10 14" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5C10 7.41896 8.28224 9.43671 6 9.89998V12H8V14H2V12H4V9.89998C1.71776 9.43671 0 7.41896 0 5V0H10V5ZM8 2H2V5C2 6.65685 3.34315 8 5 8C6.65685 8 8 6.65685 8 5V2Z" />
+          </svg>
+          <span class='hint-text'>
+            Алкоголь разрешен
+          </span>
+        </div>
       </div>
       <header class='person-header'>
         <svg class='logo' viewBox="0 0 404 244" fill="none" xmlns="http://www.w3.org/2000/svg">
